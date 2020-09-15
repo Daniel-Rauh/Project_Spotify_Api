@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    {{> navigation}}
+    <section id="artists">
+        {{#each artists}}
+        <article class="artist-result">
+            <img src="{{images.0.url}}" alt="">
+            <h1>{{name}}</h1>
+            <a href="/albums/{{id}}">Get Albums</a>
+        </article>
+        {{/each}}
+    </section>
+    {{> footer}}
+</body>
+
+</html>
